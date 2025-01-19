@@ -3,3 +3,13 @@
 # Слова во всех предложениях должны быть приведены к верхнему регистру.
 # Между словами вместо пробела ставится символ "_".
 # После записи откройте этот файл, считайте содержимое и выведите его на экран.
+
+string = input("Введите текст: ")
+
+string = string.upper().replace(" ", "_")
+with open('task4Answer.txt', 'w', encoding="utf-8") as f:
+    f.write(string)
+
+f = open('task4Answer.txt', 'r')
+print(f.read())
+f.close()
